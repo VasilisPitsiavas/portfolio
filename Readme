@@ -1,0 +1,395 @@
+# Personal Portfolio Website – Full Implementation Guide
+
+# 🎯 Objective
+
+Build a clean, professional, production-ready personal website to showcase:
+
+- CV
+- Professional experience
+- AI / ML projects (ForecastingApp, Currency Forecasting)
+- Publications (ResearchGate)
+- GitHub repositories
+- Contact information
+
+The website must be:
+
+- Static-first (no backend required initially)
+- Fast and SEO optimized
+- Minimal and professional (Swiss / fintech aesthetic)
+- Zero hosting cost
+- Hosted under a custom domain (e.g., yourname.com)
+
+---
+
+# 🏗️ Technology Stack
+
+## Core Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- GitHub (version control)
+- Vercel (Free Tier hosting)
+- Custom Domain (Namecheap / Porkbun)
+
+---
+
+# 💰 Cost Structure
+
+| Item | Cost |
+|------|------|
+| Domain | €10–15/year |
+| Hosting (Vercel) | Free |
+| SSL | Free |
+| CI/CD | Free |
+
+Total yearly cost ≈ €10–15
+
+---
+
+# 🧱 Project Architecture
+
+portfolio/
+│
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── projects/page.tsx
+│   ├── research/page.tsx
+│   ├── experience/page.tsx
+│   ├── contact/page.tsx
+│
+├── components/
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   ├── Section.tsx
+│   ├── ProjectCard.tsx
+│
+├── public/
+│   ├── cv.pdf
+│   ├── favicon.ico
+│
+└── README.md
+
+---
+
+# 🚀 Phase 1 – Environment Setup
+
+## 1. Install Node.js (LTS)
+
+Verify installation:
+
+node -v  
+npm -v  
+
+---
+
+## 2. Create Next.js Project
+
+Run:
+
+npx create-next-app@latest portfolio
+
+Select:
+
+- TypeScript → YES  
+- ESLint → YES  
+- Tailwind → YES  
+- App Router → YES  
+- src directory → NO  
+- Import alias → Default  
+
+---
+
+## 3. Run Locally
+
+cd portfolio  
+npm run dev  
+
+Visit:  
+http://localhost:3000  
+
+---
+
+# 🧠 Phase 2 – Content Planning
+
+Prepare all text before coding.
+
+## Homepage
+
+- Full Name
+- Title:
+  AI Software Engineer | Machine Learning & Forecasting
+- 2–3 sentence positioning summary
+- Buttons:
+  - View Projects
+  - Download CV
+  - Contact
+
+---
+
+## Projects Section
+
+### ForecastingApp
+- Problem solved
+- Architecture overview
+- Tech stack
+- Live demo link
+- GitHub link
+
+### Currency Forecasting App
+- ARIMAX / ML methodology
+- Data pipeline description
+- Evaluation metrics
+- GitHub link
+
+---
+
+## Research Section
+
+- Short research summary
+- Research interests
+- Link to ResearchGate
+- Selected publications
+
+---
+
+## Experience Section
+
+Timeline format:
+
+- Current Role
+- Previous Role
+- Responsibilities (technical + measurable impact)
+
+---
+
+## Contact Section
+
+- Email
+- GitHub
+- LinkedIn
+- Optional: Calendly
+
+---
+
+# 🎨 Design Principles
+
+- White background
+- Neutral color palette
+- Clean typography
+- No heavy animations
+- Professional layout
+- Fast loading
+- Mobile responsive
+
+Design inspiration:
+Swiss fintech style → structured, minimal, elegant.
+
+---
+
+# 🏗️ Phase 3 – Core Implementation
+
+## 1. layout.tsx
+
+Add metadata:
+
+export const metadata = {
+  title: "Your Name – AI Software Engineer",
+  description: "Machine Learning, Forecasting, Backend Engineering",
+};
+
+Wrap body:
+
+<body className="bg-white text-gray-900">
+
+---
+
+## 2. Navbar Component
+
+Include navigation links:
+
+- Home
+- Projects
+- Research
+- Experience
+- Contact
+
+Keep minimal, fixed at top.
+
+---
+
+## 3. Hero Section
+
+Include:
+
+- Name (large bold)
+- Professional title
+- Short positioning paragraph
+- CTA buttons
+
+---
+
+## 4. ProjectCard Component
+
+Reusable component with:
+
+- Project Title
+- Description
+- Tech tags
+- Buttons:
+  - Live Demo
+  - GitHub
+
+---
+
+## 5. Individual Pages
+
+Create:
+
+app/projects/page.tsx  
+app/research/page.tsx  
+app/experience/page.tsx  
+app/contact/page.tsx  
+
+Keep each page clean and structured.
+
+---
+
+# 🌍 Phase 4 – Domain & Deployment
+
+## 1. Initialize Git
+
+git init  
+git add .  
+git commit -m "Initial portfolio setup"  
+
+Create repository on GitHub and connect:
+
+git remote add origin https://github.com/username/portfolio.git  
+git push -u origin main  
+
+---
+
+## 2. Deploy to Vercel
+
+1. Go to vercel.com  
+2. Import GitHub repository  
+3. Deploy  
+
+Automatic CI/CD enabled.
+
+---
+
+## 3. Connect Custom Domain
+
+1. Purchase domain (yourname.com)  
+2. Go to Vercel → Settings → Domains  
+3. Add domain  
+4. Update DNS at domain provider  
+5. SSL activates automatically  
+
+---
+
+# 🔍 Phase 5 – SEO Optimization
+
+Add OpenGraph metadata:
+
+openGraph: {
+  title: "Your Name – AI Software Engineer",
+  description: "Machine Learning and Forecasting Specialist",
+  url: "https://yourdomain.com",
+}
+
+Ensure:
+
+- Page titles unique
+- Meta descriptions added
+- Clean URL structure
+- Sitemap added (optional)
+
+---
+
+# 📈 Performance Goals
+
+- Lighthouse score > 90
+- Fully static rendering
+- Minimal external dependencies
+- Fast initial load
+- Mobile responsiveness
+
+---
+
+# 🔐 Optional Enhancements
+
+- Add blog section
+- Add dark mode toggle
+- Add structured JSON-LD schema
+- Add Google Analytics
+- Add project architecture diagrams
+- Add interactive forecasting demo
+
+---
+
+# 🛑 Avoid
+
+- WordPress
+- Wix
+- Heavy templates
+- Excessive animations
+- Overcomplicated UI libraries
+
+---
+
+# 🧠 Strategic Positioning
+
+This website must:
+
+- Reinforce AI + backend identity
+- Highlight forecasting specialization
+- Show production-level engineering
+- Increase recruiter trust
+- Support Swiss / EU job applications
+- Support freelance positioning
+
+---
+
+# 🔁 Maintenance Plan
+
+Every 3–6 months:
+
+- Update projects
+- Update experience
+- Add new publications
+- Refine descriptions
+- Improve SEO
+
+---
+
+# ✅ Final Checklist
+
+- [ ] Domain purchased
+- [ ] GitHub repository created
+- [ ] Next.js project deployed
+- [ ] SSL active
+- [ ] CV uploaded (PDF)
+- [ ] Projects added
+- [ ] Research linked
+- [ ] Contact page functional
+- [ ] SEO configured
+
+---
+
+# 🏁 Expected Outcome
+
+Professional personal website:
+
+- yourname.com
+- Fast, static, secure
+- Showcasing AI & ML expertise
+- Hosting at zero cost
+- Fully scalable for future growth
+
+---
+
+End of implementation guide.
