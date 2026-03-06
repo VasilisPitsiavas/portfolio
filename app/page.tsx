@@ -174,7 +174,7 @@ export default function Home() {
                 </p>
                 <p>
                   I combine deep technical expertise with a strong research background, bridging the gap between
-                  academic innovation and production-ready software. I'm also the creator of{" "}
+                  academic innovation and production-ready software. I&apos;m also the creator of{" "}
                   <span className="text-[#00FFFF] font-semibold">Forecastly</span> — a time-series
                   forecasting-as-a-service platform.
                 </p>
@@ -200,7 +200,8 @@ export default function Home() {
                   <a href="tel:+306989940550" className="hover:text-[#00FFFF] transition-colors">
                     (+30) 6989940550
                   </a>
-                </div>
+                </div>I&apos;m also the creator of{" "}
+
               </div>
             </div>
           </ScrollReveal>
@@ -515,7 +516,7 @@ export default function Home() {
                 <div className="text-center py-10">
                   <div className="text-4xl mb-4">✅</div>
                   <p className="text-white font-semibold text-lg mb-2">Message sent!</p>
-                  <p className="text-gray-400 text-sm">Thanks for reaching out. I'll get back to you soon.</p>
+                  <p className="text-gray-400 text-sm">Thanks for reaching out. I&apos;ll get back to you soon.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
