@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",       // Static export for GitHub Pages
-    trailingSlash: true,    // Required for GH Pages routing
+    output: "export",
+    trailingSlash: true,
+  
+    // IMPORTANT for GitHub Pages
+    basePath: "/portfolio",
+    assetPrefix: "/portfolio/",
+  
     images: {
-      unoptimized: true,    // Required for static export
+      unoptimized: true,
     },
   };
   
   export default nextConfig;
-  
